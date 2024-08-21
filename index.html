@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mudidapu Tharun - Cybersecurity Student</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: #921414;
+            background: #f9f9f9; /* Black background for the entire page */
+            padding-top: 60px;
+        }
+
+        header .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 20px;
+            width: 100%;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            font-weight: bold;
+        }
+
+        .profile-photo {
+            border-radius: 15%;
+            width: 200px;
+            height: 200px;
+            border: 5px solid #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 100%;
+            background: teal; /* Darker background for nav */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            padding: 10px 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: bold;
+            transition: color 0.3s ease, text-shadow 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #00bcd4;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        main {
+            padding: 40px 20px;
+        }
+
+        /* Content Sections */
+        section {
+            background: #fff; /* White background for content sections */
+            color: teal; /* Black text color */
+            padding: 40px 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #000;
+        }
+
+        section p {
+            font-size: 1.2em;
+            color: #000;
+            margin: 10px 0;
+        }
+
+        /* Skills Section */
+        #skills .card,
+        #projects .card,
+        #certificates .card {
+            background: #f9f9f9; /* Light background for cards */
+            color: #000;
+            border-radius: 10px;
+            padding: 30px;
+            margin: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            float: left;
+            width: calc(33.33% - 30px);
+            box-sizing: border-box;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        #skills .card:hover,
+        #projects .card:hover,
+        #certificates .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+        }
+
+        #skills .card i,
+        #projects .card i,
+        #certificates .card i {
+            font-size: 2em;
+            margin-bottom: 10px;
+            color: #00bcd4;
+            transition: color 0.3s ease;
+        }
+
+        .card h3 {
+            margin-top: 10px;
+            font-size: 1.5em;
+        }
+
+        /* Contact Section */
+        #contact {
+            background: #fff;
+            padding: 40px 20px;
+            text-align: center;
+            color: teal;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .contact-info .contact-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: teal;
+            font-size: 1.5em;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .contact-info .contact-icon i {
+            margin-right: 10px;
+        }
+
+        .contact-info .contact-icon:hover {
+            color: #00bcd4;
+            transform: scale(1.1);
+        }
+
+        section::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header {
+                padding: 30px 20px;
+            }
+
+            header h1 {
+                font-size: 2em;
+            }
+
+            .profile-photo {
+                width: 120px;
+                height: 120px;
+            }
+
+            nav {
+                padding: 10px;
+                text-align: center;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            nav ul li a {
+                font-size: 1em;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .contact-info .contact-icon {
+                font-size: 1.2em;
+            }
+
+            #skills .card,
+            #projects .card,
+            #certificates .card {
+                flex: 1 1 100%;
+                margin: 10px 0;
+            }
+        }
+    </style>
+    <!-- Include Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <!-- Additional Header -->
+    <header>
+        <div class="container">
+            <h1>Tharun Mudidapu</h1>
+            <p>Cybersecurity Enthusiast | B.Tech Student</p>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li> <!-- Home page added -->
+            <li><a href="#about-me">About Me</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#certificates">Certificates</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Existing Header -->
+    <header>
+        <div class="container">
+            <img src="http://webprosindia.com/hitam/StudentPhotos/885E8858837D8C5F7655.jpg" alt="Profile Photo" class="profile-photo">
+        </div>
+    </header>
+
+    <!-- Home -->
+    <section id="home">
+        <h2>Welcome to My Portfolio</h2>
+        <p>Explore my journey as a cybersecurity enthusiast, my projects, skills, and how to get in touch with me.</p>
+    </section>
+
+    <!-- About Me -->
+    <section id="about-me">
+        <h2>About Me</h2>
+        <p>Aspiring cybersecurity professional with a robust foundation in Python programming, SQL, and front-end development. Possesses practical experience in utilizing advanced cybersecurity tools and techniques to safeguard digital environments.</p>
+    </section>
+
+    <!-- Education -->
+    <section id="education">
+        <h2>Education</h2>
+        <p><strong>Bachelor of Technology (2021-2025)</strong><br>
+        Hyderabad Institute of Technology and Management</p>
+        <p><strong>Intermediate (2019-2021)</strong><br>
+        Sri Chaitanya Junior College</p>
+        <p><strong>SSC (2009-2019)</strong><br>
+        Blooming Dales High School</p>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="card">
+            <i class="fas fa-code"></i>
+            <h3>Python Programming</h3>
+            <p>Proficient in Python with experience in building applications and scripts for cybersecurity and data analysis.</p>
+        </div>
+        <div class="card">
+            <i class="fas fa-database"></i>
+            <h3>SQL</h3>
+            <p>Strong understanding of SQL with experience in database design, management, and querying.</p>
+        </div>
+        <div class="card">
+            <i class="fas fa-laptop-code"></i>
+            <h3>Front-End Technologies</h3>
+            <p>Experienced in HTML, CSS, and JavaScript for building responsive and interactive web interfaces.</p>
+        </div>
+        <div class="card">
+            <i class="fas fa-shield-alt"></i>
+            <h3>Cybersecurity Tools</h3>
+            <p>Knowledgeable in using various cybersecurity tools to identify and mitigate threats.</p>
+        </div>
+        <div class="card">
+            <i class="fas fa-server"></i>
+            <h3>Operating Systems</h3>
+            <p>Familiar with various operating systems including OS and Linux.</p>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="card">
+            <i class="fas fa-envelope-open-text"></i>
+            <h3>Detection of Email and SMS Phishing</h3>
+            <p>Developed a tool to detect phishing attacks in emails and SMS, enhancing security for end-users.</p>
+        </div>
+        <div class="card">
+            <i class="fas fa-lock"></i>
+            <h3>Blockchain Compiler for Custom Cryptocurrencies</h3>
+            <p>Built a compiler for blockchain applications, enabling the creation and management of custom cryptocurrencies.</p>
+        </div>
+        <div class="card">
+            <i class="fas fa-lock"></i>
+            <h3>Anti-Theft Locking System</h3>
+            <p>Engineered a secure locking system with anti-theft capabilities, integrating both hardware and software components.</p>
+        </div>
+    </section>
+
+    <!-- Certificates -->
+    <section id="certificates">
+        <h2>Certificates</h2>
+        <div class="card">
+            <i class="fas fa-certificate"></i>
+            <h3>Introduction to Cyber Security</h3>
+            <p>Completed a comprehensive course on the fundamentals of cybersecurity.</p>
+        </div>
+        <div class="card">
+            <i class="fas fa-certificate"></i>
+            <h3>Ethical Hacker</h3>
+            <p>Earned certification as an Ethical Hacker, showcasing skills in identifying and mitigating security threats.</p>
+        </div>
+        <div class="card">
+            <i class="fas fa-certificate"></i>
+            <h3>Coding Essentials</h3>
+            <p>Received certification in coding essentials, covering key programming concepts and practices.</p>
+        </div>
+        <div class="card">
+            <i class="fas fa-certificate"></i>
+            <h3>Cyber Threat Management</h3>
+            <p>Completed training in managing cyber threats, focusing on prevention, detection, and response strategies.</p>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+        <h2>Contact</h2>
+        <div class="contact-info">
+            <a href="tel:+917013671235" class="contact-icon"><i class="fas fa-phone-alt"></i> +91 7013671235</a>
+            <a href="mailto:tharunmudidapu03@gmail.com" class="contact-icon"><i class="fas fa-envelope"></i> tharunmudidapu03@gmail.com</a>
+            <a href="https://www.linkedin.com/in/tharun-mudidapu-925514288/" target="_blank" class="contact-icon"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 harun Mudidapu . All rights reserved.</p>
+    </footer>
+
+
+</body>
+</html>
